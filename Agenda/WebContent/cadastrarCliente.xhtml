@@ -1,0 +1,44 @@
+<ui:composition template="/template.xhtml"
+				xmlns="http://www.w3.org/1999/xhtml"
+				xmlns:h="http://java.sun.com/jsf/html"
+				xmlns:f="http://java.sun.com/jsf/core"
+			    xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<ui:define name="conteudo">
+	   
+	   <h2>Novo Cliente:</h2>
+	   
+	   <h:form>
+			<h:panelGrid columns="3">
+			   <h:outputLabel value="Nome:* " for="inputNome" />
+			   <h:inputText id="inputNome" value="#{petShopBean.cliente.nome}" />
+			   <h:message for="inputNome" />
+			   
+			   <h:outputLabel value="Telefone:* " for="inputTelefone" />
+			   <h:inputText id="inputTelefone" value="#{petShopBean.cliente.telefone}" />
+			   <h:message for="inputTelefone" />
+			   
+			   <h:outputLabel value="Data de Nascimento: " for="inputDtCadastro" />
+			   <h:inputText id="inputDtCadastro" value="#{petShopBean.cliente.dataCadastro}" />
+			   <h:message for="inputDtCadastro" />
+			   
+			   <h:outputLabel value="Endereco: " for="inputEndereco" />
+			   <h:inputText id="inputEndereco" value="#{petShopBean.cliente.endereco}" />
+			   <h:message for="inputEndereco" />
+			   
+			   <h:outputLabel value="Nome do Pet: " for="inputNomePet" />
+			   <h:inputText id="inputNomePet" value="#{petShopBean.cliente.nomePet}" />
+			   <h:message for="inputNomePet" />
+			   
+			   <h:outputLabel value="Tipo do Pet: " for="inputTipoPet" />
+			   <h:inputText id="inputTipoPet" value="#{petShopBean.cliente.tipoPet}" />
+			   <h:message for="inputTipoPet" />
+			   
+			   <h:commandButton value="Cadastrar" action="#{petShopBean.cadastrarCliente}"/>
+			   
+			</h:panelGrid>
+		</h:form>
+	   
+	</ui:define>
+
+</ui:composition>
